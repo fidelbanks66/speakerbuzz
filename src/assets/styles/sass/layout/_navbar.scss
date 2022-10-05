@@ -1,0 +1,184 @@
+.navbar {
+  display: relative;
+
+  nav {
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $width-container;
+    height: 108px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid #979797;
+
+    .nav-links {
+      .link ~ .link {
+        margin-left: 35px;
+      }
+    }
+
+    .cart-container {
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 999;
+
+      .nav-cart {
+        height: 20px;
+        cursor: pointer;
+
+        .cart-badge {
+          background-color: $color-orange;
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          width: 18px;
+          height: 18px;
+          font-size: 12px;
+          font-weight: bold;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          line-height: 0;
+        }
+      }
+
+      .cart {
+        background-color: $color-white;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 480px;
+        padding: 40px;
+        border-radius: $border-radius;
+
+        header {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 31px;
+
+          a.remove-all {
+            font-size: 15px;
+            cursor: pointer;
+          }
+
+          a.remove-all:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .products-container {
+          .cart-product-card {
+            display: grid;
+            grid-template-columns: 64px auto;
+            column-gap: 16px;
+            font-weight: bold;
+
+            img {
+              height: 64px;
+              border-radius: $border-radius;
+            }
+
+            p {
+              margin: 0;
+            }
+
+            .flex {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+
+              a {
+                color: inherit;
+                text-decoration: none;
+              }
+
+              a:hover {
+                text-decoration: underline;
+              }
+
+              .flex-right {
+                display: flex;
+                align-items: center;
+
+                .product-qty {
+                  display: flex;
+                  align-items: center;
+                  background-color: $color-grey;
+                  font-weight: bold;
+                  height: 32px;
+
+                  button {
+                    border: none;
+                    padding: 0 12px;
+                    color: $color-grey-dark;
+                    cursor: pointer;
+                  }
+
+                  button:hover {
+                    color: $color-orange;
+                  }
+
+                  p {
+                    font-size: 13px;
+                    display: inline;
+                    margin: 0;
+                    padding: 0 10px;
+                  }
+                }
+
+                .remove-item {
+                  position: absolute;
+                  right: 17px;
+                  border: none;
+                  background-color: transparent;
+                  cursor: pointer;
+                  transform: rotate(45deg);
+                  font-size: 22px;
+                  font-weight: normal;
+                }
+              }
+            }
+
+            .product-price {
+              font-size: 14px;
+            }
+          }
+
+          .cart-product-card ~ .cart-product-card {
+            margin-top: 24px;
+          }
+        }
+
+        .total {
+          margin-top: 32px;
+          display: flex;
+          justify-content: space-between;
+
+          p {
+            margin: 0;
+          }
+
+          .total-title {
+            text-transform: uppercase;
+          }
+
+          .total-amount {
+            font-weight: bold;
+          }
+        }
+
+        .btn {
+          width: 100%;
+          text-align: center;
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}
