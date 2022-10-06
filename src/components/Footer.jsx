@@ -35,29 +35,29 @@ export const Footer = () => {
           demo facility - we’re open 7 days a week.
         </p>
         <div className="social">
-          <a href="#" className="social-button">
+          <a href="https://github.com/fidelbanks66" className="social-button">
             <img
               src={`${process.env.PUBLIC_URL}/images/shared/desktop/icon-facebook.svg`}
-              alt=""
+              alt="fb"
             />
           </a>
-          <a href="#" className="social-button">
+          <a href="https://github.com/fidelbanks66" className="social-button">
             <img
               src={`${process.env.PUBLIC_URL}/images/shared/desktop/icon-twitter.svg`}
-              alt=""
+              alt="tw"
             />
           </a>
-          <a href="#" className="social-button">
+          <a href="https://github.com/fidelbanks66" className="social-button">
             <img
               src={`${process.env.PUBLIC_URL}/images/shared/desktop/icon-instagram.svg`}
-              alt=""
+              alt="insta"
             />
           </a>
         </div>
         <a
           className="build-by"
-          href="https://github.com/Fidelispramesti/audiophile"
-          target="_blank"
+          href="https://github.com/Fidelbanks66"
+          target="blank"
         >
           Built with React by Fidelis
         </a>
